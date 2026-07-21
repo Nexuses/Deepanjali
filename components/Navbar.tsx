@@ -16,9 +16,9 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '/#services' },
+  { label: 'Services', href: '/services' },
   { label: 'Why Us', href: '/#why-us' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -29,6 +29,8 @@ export default function Navbar() {
   const isActive = (link: NavLink) => {
     if (link.href === '/') return pathname === '/';
     if (link.href === '/about') return pathname === '/about';
+    if (link.href === '/services') return pathname === '/services';
+    if (link.href === '/contact') return pathname === '/contact';
     return false;
   };
 

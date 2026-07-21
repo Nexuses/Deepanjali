@@ -6,14 +6,14 @@ const LOGO_SRC =
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '#services' },
+  { label: 'Services', href: '/services' },
 ];
 
 const serviceLinks = [
-  { label: 'Bullion Trading', href: '#services' },
-  { label: 'Assaying Services', href: '#services' },
-  { label: 'Gold Refinement', href: '#services' },
-  { label: 'Market Analysis', href: '#services' },
+  { label: 'Bullion Trading', href: '/services' },
+  { label: 'Assaying Services', href: '/services' },
+  { label: 'Gold Refinement', href: '/services' },
+  { label: 'Market Analysis', href: '/services' },
 ];
 
 const policyLinks = [
