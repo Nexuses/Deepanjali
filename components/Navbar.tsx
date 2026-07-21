@@ -17,7 +17,7 @@ const navLinks: NavLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Why Us', href: '/#why-us' },
+  { label: 'Why Us', href: '/why-us' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -30,6 +30,7 @@ export default function Navbar() {
     if (link.href === '/') return pathname === '/';
     if (link.href === '/about') return pathname === '/about';
     if (link.href === '/services') return pathname === '/services';
+    if (link.href === '/why-us') return pathname === '/why-us';
     if (link.href === '/contact') return pathname === '/contact';
     return false;
   };

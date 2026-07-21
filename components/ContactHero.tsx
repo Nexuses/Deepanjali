@@ -3,9 +3,8 @@ import Navbar from '@/components/Navbar';
 
 const CONTACT_HERO_BG =
   'https://nexuses.s3.us-east-2.amazonaws.com/Exquisite_24k_gold_bars_stacked_perfectly_on_a_luxurious_black_marble_surface__reflecting_soft_ambient_lighting_in_a_high-end_vault_setting._The_scene_captures_the_essence_of_pure_wealth_and_precision_craftsmanship_1784625237352_qo7c.png';
-
 const CONTACT_HERO_OVERLAY =
-  'https://nexuses.s3.us-east-2.amazonaws.com/Rectangle_34624223__2__1784625254691_8405.png';
+  'https://nexuses.s3.us-east-2.amazonaws.com/Rectangle_34624223__3__1784639084230_s8x1.png';
 
 export default function ContactHero() {
   return (
@@ -24,10 +23,10 @@ export default function ContactHero() {
           src={CONTACT_HERO_OVERLAY}
           alt=""
           fill
-          priority
           sizes="100vw"
+          unoptimized
         />
-        <div className="contact-hero__gradient" aria-hidden="true" />
+        <div className="contact-hero__scrim" aria-hidden="true" />
       </div>
 
       <Navbar />
@@ -52,4 +51,3 @@ export default function ContactHero() {
     </section>
   );
 }
-

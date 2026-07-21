@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 const SERVICES_HERO_IMAGE =
   'https://nexuses.s3.us-east-2.amazonaws.com/image_47_1784617418628_cslt.png';
 const SERVICES_HERO_OVERLAY =
-  'https://nexuses.s3.us-east-2.amazonaws.com/Rectangle_34624223__1__1784618127053_tqqs.png';
+  'https://nexuses.s3.us-east-2.amazonaws.com/Rectangle_34624223__3__1784639084230_s8x1.png';
 
 export default function ServicesHero() {
   return (
@@ -24,8 +24,9 @@ export default function ServicesHero() {
           alt=""
           fill
           sizes="100vw"
+          unoptimized
         />
-        <div className="services-hero__gradient" aria-hidden="true" />
+        <div className="services-hero__scrim" aria-hidden="true" />
       </div>
 
       <Navbar />
