@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
-import LiveSpot from '@/components/LiveSpot';
 
 const services = [
   'Wholesale Bullion',
@@ -66,8 +65,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      <LiveSpot />
     </section>
   );
 }

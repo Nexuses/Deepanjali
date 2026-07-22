@@ -120,14 +120,14 @@ export default function Navbar() {
           ))}
           <Link
             className="navbar__cta navbar__cta--menu"
-            href="/#contact"
+            href="/trade-now"
             onClick={() => setMenuOpen(false)}
           >
             Trade Now
           </Link>
         </nav>
 
-        <Link className="navbar__cta navbar__cta--bar" href="/#contact">
+        <Link className="navbar__cta navbar__cta--bar" href="/trade-now">
           Trade Now
         </Link>
       </div>

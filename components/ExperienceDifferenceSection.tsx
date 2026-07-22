@@ -26,7 +26,7 @@ export default function ExperienceDifferenceSection() {
         <div className="ready-transact__actions" role="group" aria-label="CTA">
           <a
             className="conversation__btn conversation__btn--primary"
-            href="/contact"
+            href="/trade-now"
           >
             Trade Now
           </a>

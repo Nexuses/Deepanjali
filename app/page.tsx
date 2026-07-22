@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import LiveSpot from '@/components/LiveSpot';
 import WhoWeAre from '@/components/WhoWeAre';
 import Features from '@/components/Features';
 import CoreServices from '@/components/CoreServices';
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <main className="page">
       <Hero />
+      <LiveSpot />
       <WhoWeAre />
       <Features />
       <CoreServices />
