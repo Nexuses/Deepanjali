@@ -5,8 +5,6 @@ export default function BeginConversation() {
     <section className="conversation" aria-label="Begin the conversation">
       <div className="conversation__inner">
         <div className="conversation__card">
-          <div className="conversation__pattern" aria-hidden="true" />
-
           <p className="conversation__label">BEGIN THE CONVERSATION</p>
           <span className="conversation__rule" aria-hidden="true" />
 
@@ -37,4 +35,3 @@ export default function BeginConversation() {
     </section>
   );
 }
-

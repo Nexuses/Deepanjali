@@ -1,7 +1,6 @@
 export default function ReadyToTransactSection() {
   return (
     <section className="ready-transact" aria-label="Ready to transact">
-      <div className="ready-transact__pattern" aria-hidden="true" />
       <div className="ready-transact__inner">
         <p className="ready-transact__eyebrow">READY TO TRANSACT</p>
         <span className="ready-transact__rule" aria-hidden="true" />

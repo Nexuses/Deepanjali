@@ -4,7 +4,6 @@ export default function DipanjaliDifferenceSection() {
       className="dipanjali-difference"
       aria-label="The Dipanjali Difference"
     >
-      <div className="dipanjali-difference__pattern" aria-hidden="true" />
       <div className="dipanjali-difference__inner">
         <p className="dipanjali-difference__eyebrow">
           THE DIPANJALI DIFFERENCE

@@ -4,7 +4,6 @@ export default function ExperienceDifferenceSection() {
       className="ready-transact experience-difference"
       aria-label="Experience the difference"
     >
-      <div className="ready-transact__pattern" aria-hidden="true" />
       <div className="ready-transact__inner">
         <p className="ready-transact__eyebrow">EXPERIENCE THE DIFFERENCE</p>
         <span className="ready-transact__rule" aria-hidden="true" />

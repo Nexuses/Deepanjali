@@ -3,8 +3,6 @@ export default function Testimonial() {
     <section className="testimonial" aria-label="Client testimonial">
       <div className="testimonial__inner">
         <div className="testimonial__card">
-          <div className="testimonial__pattern" aria-hidden="true" />
-
           <div className="testimonial__content">
             <p className="testimonial__label">Client Testimonial</p>
             <blockquote className="testimonial__quote">

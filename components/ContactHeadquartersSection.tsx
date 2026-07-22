@@ -5,7 +5,6 @@ export default function ContactHeadquartersSection() {
   return (
     <section className="contact-hq" aria-label="Corporate headquarters">
       <div className="contact-hq__header">
-        <div className="contact-hq__pattern" aria-hidden="true" />
         <div className="contact-hq__headerInner">
           <MapPin className="contact-hq__pin" aria-hidden="true" />
           <h2 className="contact-hq__title">Corporate Headquarters</h2>

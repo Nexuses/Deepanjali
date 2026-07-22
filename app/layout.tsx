@@ -1,19 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Outfit } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import './globals.css';
 
-const cormorant = Cormorant_Garamond({
+const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['500', '600'],
+  weight: ['300', '400', '500', '700'],
   style: ['normal', 'italic'],
-  variable: '--font-cormorant',
-  display: 'swap',
-});
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  weight: ['300', '500', '600'],
-  variable: '--font-outfit',
+  variable: '--font-roboto',
   display: 'swap',
 });
 
@@ -37,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${outfit.variable}`}>
-        {children}
-      </body>
+      <body className={roboto.variable}>{children}</body>
     </html>
   );
 }

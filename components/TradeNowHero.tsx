@@ -93,8 +93,6 @@ export default function TradeNowHero() {
 
   return (
     <section className="trade-now-hero" aria-label="Institutional trading desk">
-      <div className="trade-now-hero__pattern" aria-hidden="true" />
-
       <Navbar />
       <div className="trade-now-hero__rule" aria-hidden="true" />
 
