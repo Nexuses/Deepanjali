@@ -35,10 +35,11 @@ export default function ServicesHero() {
       <div className="services-hero__content">
         <p className="services-hero__eyebrow">OUR SERVICES</p>
         <h1 className="services-hero__title">
-          <span className="services-hero__title-line">
-            End-to-End Execution Across the
+          <span className="services-hero__title-line">End-to-End Execution</span>
+          <span className="services-hero__title-line services-hero__title-line--second">
+            Across the{' '}
+            <span className="services-hero__title-accent">Gold Value Chain.</span>
           </span>
-          <span className="services-hero__title-accent">Gold Value Chain.</span>
         </h1>
         <p className="services-hero__lede">
           From LBMA-certified wholesale distribution to state-of-the-art

@@ -1,4 +1,11 @@
 import Image from 'next/image';
+import {
+  Factory,
+  Gauge,
+  Layers,
+  Percent,
+  type LucideIcon,
+} from 'lucide-react';
 
 const BULLION_IMAGE =
   'https://nexuses.s3.us-east-2.amazonaws.com/P5150161_1_1784630045052_ywp5.png';
@@ -26,99 +33,20 @@ const features = [
   },
 ];
 
-function FeatureIcon({ type }: { type: (typeof features)[number]['icon'] }) {
+type FeatureIconType = (typeof features)[number]['icon'];
+
+const featureIcons: Record<FeatureIconType, LucideIcon> = {
+  refinery: Factory,
+  inventory: Layers,
+  execution: Gauge,
+  spreads: Percent,
+};
+
+function FeatureIcon({ type }: { type: FeatureIconType }) {
+  const Icon = featureIcons[type];
   return (
     <span className="service-bullion__icon" aria-hidden="true">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {type === 'refinery' && (
-          <>
-            <path
-              d="M6 26V14l5-3v3l5-3v15"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16 26V12l5 3v-3l5 3v11"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M4 26h24"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8.5 18v4M11.5 17v5M18.5 18v4M21.5 19v3"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'inventory' && (
-          <>
-            <rect
-              x="7"
-              y="5"
-              width="18"
-              height="22"
-              rx="2"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <path
-              d="M11 11h10M11 16h10M11 21h6"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M11 11.2l1.4 1.4 2.4-2.6"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </>
-        )}
-        {type === 'execution' && (
-          <>
-            <circle cx="16" cy="16" r="5.5" stroke="currentColor" strokeWidth="1.5" />
-            <path
-              d="M16 7.5V5.5M16 26.5v-2M24.5 16h2M5.5 16h2M21.8 10.2l1.4-1.4M8.8 23.2l1.4-1.4M21.8 21.8l1.4 1.4M8.8 8.8l1.4 1.4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M14.2 16.1l1.5 1.5 3.2-3.4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </>
-        )}
-        {type === 'spreads' && (
-          <>
-            <circle cx="16" cy="16" r="10" stroke="currentColor" strokeWidth="1.5" />
-            <text
-              x="16"
-              y="20.2"
-              textAnchor="middle"
-              fill="currentColor"
-              fontSize="9"
-              fontWeight="700"
-              fontFamily="var(--font-sans), sans-serif"
-            >
-              0%
-            </text>
-          </>
-        )}
-      </svg>
+      <Icon />
     </span>
   );
 }

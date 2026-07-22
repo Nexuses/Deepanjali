@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Check } from 'lucide-react';
 
 const SHOWROOM_SRC =
   'https://nexuses.s3.us-east-2.amazonaws.com/Showroom_1784611440459_gdr4.png';
@@ -21,16 +22,7 @@ const services = [
 function CheckIcon() {
   return (
     <span className="services__check" aria-hidden="true">
-      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="14" fill="#D4AF37" />
-        <path
-          d="M8.5 14.2l3.4 3.4 7.6-7.6"
-          stroke="#ffffff"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <Check />
     </span>
   );
 }

@@ -1,3 +1,13 @@
+import {
+  FileBadge,
+  Scale,
+  TrendingUp,
+  Truck,
+  Warehouse,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
+
 const objections = [
   {
     icon: 'spreads' as const,
@@ -38,204 +48,22 @@ const objections = [
   },
 ];
 
-function ObjectionIcon({
-  type,
-}: {
-  type: (typeof objections)[number]['icon'];
-}) {
+type ObjectionIconType = (typeof objections)[number]['icon'];
+
+const objectionIcons: Record<ObjectionIconType, LucideIcon> = {
+  spreads: TrendingUp,
+  purity: FileBadge,
+  storage: Warehouse,
+  execution: Zap,
+  compliance: Scale,
+  supply: Truck,
+};
+
+function ObjectionIcon({ type }: { type: ObjectionIconType }) {
+  const Icon = objectionIcons[type];
   return (
     <span className="industry-objections__icon" aria-hidden="true">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {type === 'spreads' && (
-          <>
-            <path
-              d="M9.5 30c0-6.2 4.2-10.2 10.5-10.8"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8 24c1.4 1.6 2.3 3.7 2.3 6.2V33h16"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M22.5 8.5l1.4 2.9 3.2.3-2.4 2.2.7 3.1-2.9-1.7-2.9 1.7.7-3.1-2.4-2.2 3.2-.3 1.4-2.9z"
-              stroke="currentColor"
-              strokeWidth="1.35"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M30 14.5l1 2 2.2.2-1.7 1.5.5 2.2-2-1.2-2 1.2.5-2.2-1.7-1.5 2.2-.2 1-2z"
-              stroke="currentColor"
-              strokeWidth="1.25"
-              strokeLinejoin="round"
-            />
-          </>
-        )}
-        {type === 'purity' && (
-          <>
-            <path
-              d="M12 7.5h12l5 5V32.5H12V7.5z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M24 7.5v5h5"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16 17h9M16 21.5h9M16 26h6"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-            />
-            <circle cx="28" cy="28" r="5.2" stroke="currentColor" strokeWidth="1.5" />
-            <path
-              d="M25.8 28.1l1.5 1.5 3-3.2"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </>
-        )}
-        {type === 'storage' && (
-          <>
-            <rect
-              x="8"
-              y="22"
-              width="10"
-              height="8"
-              rx="1"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <rect
-              x="15"
-              y="15"
-              width="10"
-              height="8"
-              rx="1"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <rect
-              x="22"
-              y="8"
-              width="10"
-              height="8"
-              rx="1"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <path
-              d="M10.5 25.5h5M17.5 18.5h5M24.5 11.5h5"
-              stroke="currentColor"
-              strokeWidth="1.3"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'execution' && (
-          <>
-            <rect
-              x="10"
-              y="8"
-              width="20"
-              height="26"
-              rx="2"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <path d="M10 13.5h20" stroke="currentColor" strokeWidth="1.5" />
-            <circle cx="20" cy="24" r="5.5" stroke="currentColor" strokeWidth="1.5" />
-            <path
-              d="M20 21.2v3.2l2.2 1.4"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M15 10h2.5M22.5 10h2.5"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'compliance' && (
-          <>
-            <path
-              d="M18 10.5h4.5v8.5c0 1.8-.8 3.2-2.25 4.1-1.45-.9-2.25-2.3-2.25-4.1V10.5z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M14.5 10.5h11.5"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12 29.5h16M16.5 29.5v4M23.5 29.5v4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M20.25 23v6.5"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <circle cx="20.25" cy="8.2" r="1.6" stroke="currentColor" strokeWidth="1.3" />
-          </>
-        )}
-        {type === 'supply' && (
-          <>
-            <path
-              d="M8 30h24"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12 30V14h4v4h6v12"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16 14V9.5h8.5V14"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M22 22h8l2.5 3.5V30h-4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <circle cx="15" cy="30" r="2.2" stroke="currentColor" strokeWidth="1.4" />
-            <circle cx="28.5" cy="30" r="2.2" stroke="currentColor" strokeWidth="1.4" />
-            <path
-              d="M20 9.5V7"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-      </svg>
+      <Icon />
     </span>
   );
 }

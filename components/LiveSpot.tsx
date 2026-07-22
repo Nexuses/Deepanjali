@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { TrendingDown, TrendingUp } from 'lucide-react';
 
 type SpotItemData = {
   id: string;
@@ -93,7 +94,13 @@ function SpotItem({ name, price, change }: SpotItemData) {
       >
         {showChange ? (
           <>
-            <span aria-hidden="true">{isUp ? '▲' : '▼'}</span>
+            <span aria-hidden="true">
+              {isUp ? (
+                <TrendingUp className="live-spot__trend-icon" />
+              ) : (
+                <TrendingDown className="live-spot__trend-icon" />
+              )}
+            </span>
             {Math.abs(change).toFixed(2)}%
           </>
         ) : (

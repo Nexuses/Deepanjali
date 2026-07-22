@@ -41,7 +41,7 @@ export default function WhyUsHero() {
         </h1>
         <p className="why-us-hero__lede">
           In a market defined by opacity and intermediary friction, Dipanjali
-          Gold Trading was built as the alternative — institutional spreads,
+          Gold Trading was built as the alternative - institutional spreads,
           certified purity, dedicated relationship desks, and zero compromise on
           compliance.
         </p>

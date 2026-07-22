@@ -1,119 +1,9 @@
-import React from 'react';
-
-function IconKyc() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect
-        x="8"
-        y="12"
-        width="28"
-        height="22"
-        rx="2.5"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-      <circle cx="17.5" cy="21" r="3.2" stroke="currentColor" strokeWidth="1.5" />
-      <path
-        d="M12.5 29.5c.8-2.2 2.4-3.4 5-3.4s4.2 1.2 5 3.4"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M25 19.5h7.5M25 23.5h7.5M25 27.5h5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M33.5 10.5l6.5 2.4v5.2c0 4.2-2.6 7.2-6.5 8.6-3.9-1.4-6.5-4.4-6.5-8.6v-5.2l6.5-2.4z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-        fill="#f5f1e9"
-      />
-      <path
-        d="M31.2 18.2l1.7 1.7 3.4-3.4"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function IconSpot() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M24 6.5c1.35 0 2 1.35 3.2 1.8 1.2.45 2.65-.15 3.6.8.95.95.35 2.4.8 3.6.45 1.2 1.8 1.85 1.8 3.2s-1.35 2-1.8 3.2c-.45 1.2.15 2.65-.8 3.6-.95.95-2.4.35-3.6.8-1.2.45-1.85 1.8-3.2 1.8s-2-1.35-3.2-1.8c-1.2-.45-2.65.15-3.6-.8-.95-.95-.35-2.4-.8-3.6C12.85 21.9 11.5 21.25 11.5 19.9s1.35-2 1.8-3.2c.45-1.2-.15-2.65.8-3.6.95-.95 2.4-.35 3.6-.8C22 7.85 22.65 6.5 24 6.5z"
-        stroke="currentColor"
-        strokeWidth="1.55"
-        strokeLinejoin="round"
-      />
-      <circle cx="24" cy="19.9" r="8" stroke="currentColor" strokeWidth="1.4" />
-      <path
-        d="M19.8 20l2.9 2.9 5.6-5.6"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function IconAssay() {
-  return (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M10 16h12l3 3.5h13v18.5H10V16z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M16 16V12.5c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2V16"
-        stroke="currentColor"
-        strokeWidth="1.55"
-      />
-      <path
-        d="M18 11h12M19.5 8.5h9"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M17 26h14M17 30.5h10"
-        stroke="currentColor"
-        strokeWidth="1.45"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
+import {
+  BadgeDollarSign,
+  FlaskConical,
+  IdCard,
+  type LucideIcon,
+} from 'lucide-react';
 
 const actions = [
   {
@@ -139,10 +29,17 @@ const actions = [
   },
 ];
 
-function ActionIcon({ type }: { type: 'kyc' | 'spot' | 'assay' }) {
-  if (type === 'kyc') return <IconKyc />;
-  if (type === 'spot') return <IconSpot />;
-  return <IconAssay />;
+type ActionIconType = (typeof actions)[number]['icon'];
+
+const actionIcons: Record<ActionIconType, LucideIcon> = {
+  kyc: IdCard,
+  spot: BadgeDollarSign,
+  assay: FlaskConical,
+};
+
+function ActionIcon({ type }: { type: ActionIconType }) {
+  const Icon = actionIcons[type];
+  return <Icon />;
 }
 
 export default function ContactActionsSection() {

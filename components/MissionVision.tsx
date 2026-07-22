@@ -21,10 +21,9 @@ function PurposeIcon({ type }: { type: PurposeItem['icon'] }) {
   return (
     <span className="purpose__icon" aria-hidden="true">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="24" r="24" fill="#D4AF37" />
-        {type === 'mission' && (
+        {type === 'mission' ? (
           <g
-            stroke="#1a1408"
+            stroke="currentColor"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -34,10 +33,9 @@ function PurposeIcon({ type }: { type: PurposeItem['icon'] }) {
             <path d="M13 32h22" />
             <path d="M20 16.5l4-2.5 4 2.5" />
           </g>
-        )}
-        {type === 'vision' && (
+        ) : (
           <g
-            stroke="#1a1408"
+            stroke="currentColor"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -47,22 +45,22 @@ function PurposeIcon({ type }: { type: PurposeItem['icon'] }) {
             <path d="M22 28.5c.6-2.2 1.4-3.6 2.8-4.4" />
             <path
               d="M24 11.5l1.05 2.15 2.35.3-1.75 1.65.45 2.35L24 16.7l-2.1 1.25.45-2.35-1.75-1.65 2.35-.3z"
-              fill="#1a1408"
+              fill="currentColor"
               stroke="none"
             />
             <path
               d="M17.2 14.2l.75 1.55 1.7.22-1.25 1.2.32 1.68-1.52-.85-1.52.85.32-1.68-1.25-1.2 1.7-.22z"
-              fill="#1a1408"
+              fill="currentColor"
               stroke="none"
             />
             <path
               d="M30.8 14.2l.75 1.55 1.7.22-1.25 1.2.32 1.68-1.52-.85-1.52.85.32-1.68-1.25-1.2 1.7-.22z"
-              fill="#1a1408"
+              fill="currentColor"
               stroke="none"
             />
             <path
               d="M27.8 19.2l.55 1.15 1.25.16-.95.9.25 1.25-1.1-.6-1.1.6.25-1.25-.95-.9 1.25-.16z"
-              fill="#1a1408"
+              fill="currentColor"
               stroke="none"
             />
           </g>

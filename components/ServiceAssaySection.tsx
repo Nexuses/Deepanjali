@@ -1,4 +1,11 @@
 import Image from 'next/image';
+import {
+  Atom,
+  Flame,
+  HandCoins,
+  Microscope,
+  type LucideIcon,
+} from 'lucide-react';
 
 const ASSAY_IMAGE =
   'https://nexuses.s3.us-east-2.amazonaws.com/pollution-industry-exterior-daylight_1_1784630504149_ahll.png';
@@ -26,93 +33,20 @@ const features = [
   },
 ];
 
-function FeatureIcon({ type }: { type: (typeof features)[number]['icon'] }) {
+type FeatureIconType = (typeof features)[number]['icon'];
+
+const featureIcons: Record<FeatureIconType, LucideIcon> = {
+  assay: Microscope,
+  melting: Flame,
+  settlement: HandCoins,
+  composition: Atom,
+};
+
+function FeatureIcon({ type }: { type: FeatureIconType }) {
+  const Icon = featureIcons[type];
   return (
     <span className="service-assay__icon" aria-hidden="true">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {type === 'assay' && (
-          <>
-            <rect
-              x="6"
-              y="7"
-              width="12"
-              height="16"
-              rx="1.5"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <path
-              d="M9 12h6M9 16h6M9 20h4"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-            />
-            <circle cx="22" cy="20" r="5" stroke="currentColor" strokeWidth="1.5" />
-            <path
-              d="M25.5 23.5L29 27"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'melting' && (
-          <>
-            <path
-              d="M10 12c0-3.2 2.7-6 6-6s6 2.8 6 6c0 4.5-6 12-6 12s-6-7.5-6-12z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M14 13.5c.6-1.2 1.5-2 2.8-2"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8 26h16"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'settlement' && (
-          <>
-            <path
-              d="M8 14c0-2.5 3.5-4.5 8-4.5s8 2 8 4.5c0 1.6-1.4 3-3.8 3.8L18 24H14l-2.2-5.7C9.4 17 8 15.6 8 14z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <circle cx="16" cy="13.5" r="3.2" stroke="currentColor" strokeWidth="1.4" />
-            <path
-              d="M16 11.2v4.6M14.4 12.4h2.4c.7 0 1.2.4 1.2 1s-.5 1-1.2 1h-2.8"
-              stroke="currentColor"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'composition' && (
-          <>
-            <circle cx="16" cy="16" r="5.2" stroke="currentColor" strokeWidth="1.5" />
-            <path
-              d="M16 8.2V5.8M16 26.2v-2.4M23.8 16h2.4M5.8 16h2.4M21.5 10.5l1.7-1.7M8.8 23.2l1.7-1.7M21.5 21.5l1.7 1.7M8.8 8.8l1.7 1.7"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-            />
-            <path
-              d="M14 14.5v5l2-1.2 2 1.2v-5"
-              stroke="currentColor"
-              strokeWidth="1.3"
-              strokeLinejoin="round"
-            />
-          </>
-        )}
-      </svg>
+      <Icon strokeWidth={1.5} />
     </span>
   );
 }
@@ -135,7 +69,7 @@ export default function ServiceAssaySection() {
         </div>
 
         <div className="service-assay__copy">
-          <div className="service-assay__labelBlock">
+          <div className="service-assay__header">
             <span className="service-assay__badge" aria-hidden="true">
               B
             </span>

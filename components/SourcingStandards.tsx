@@ -1,3 +1,11 @@
+import {
+  BadgeCheck,
+  Building2,
+  FileCheck2,
+  Globe2,
+  type LucideIcon,
+} from 'lucide-react';
+
 const cards = [
   {
     label: 'AML / CFT Compliant',
@@ -17,67 +25,18 @@ const cards = [
   },
 ];
 
+const icons: Record<(typeof cards)[number]['icon'], LucideIcon> = {
+  aml: FileCheck2,
+  purity: BadgeCheck,
+  conflict: Globe2,
+  kyc: Building2,
+};
+
 function SourcingCardIcon({ type }: { type: (typeof cards)[number]['icon'] }) {
+  const Icon = icons[type];
   return (
     <span className="sourcing__card-icon" aria-hidden="true">
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {type === 'aml' && (
-          <g
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M14 12h24l6 6v34H14V12z" />
-            <path d="M38 12v6h6" />
-            <path d="M22 26h18M22 32h18M22 38h12" />
-            <circle cx="44" cy="44" r="10" fill="#d4af37" />
-            <circle cx="44" cy="44" r="10" />
-            <path d="M39.5 44.2l3 3 6.2-6.5" />
-          </g>
-        )}
-        {type === 'purity' && (
-          <g
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="32" cy="30" r="14" />
-            <path d="M24 42l-3 12 11-5 11 5-3-12" />
-            <path d="M26.5 30.2l3.2 3.2 7.2-7.5" />
-          </g>
-        )}
-        {type === 'conflict' && (
-          <g
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="28" cy="28" r="14" />
-            <ellipse cx="28" cy="28" rx="6" ry="14" />
-            <path d="M14 28h28M28 14c4 4.5 6 9 6 14s-2 9.5-6 14M28 14c-4 4.5-6 9-6 14s2 9.5 6 14" />
-            <circle cx="44" cy="44" r="9" fill="#d4af37" />
-            <circle cx="44" cy="44" r="9" />
-            <path d="M50.5 50.5l5 5" />
-          </g>
-        )}
-        {type === 'kyc' && (
-          <g
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M10 50V28l22-12 22 12v22" />
-            <path d="M10 50h44" />
-            <path d="M18 50V34h8v16M28 50V30h8v20M38 50V34h8v16" />
-            <path d="M26 20h12" />
-            <path d="M32 12v6" />
-          </g>
-        )}
-      </svg>
+      <Icon />
     </span>
   );
 }
@@ -91,7 +50,9 @@ export default function SourcingStandards() {
           <span className="sourcing__rule" aria-hidden="true" />
 
           <h2 className="sourcing__title" id="sourcing-heading">
-            Every Gram. Fully Traceable. Conflict-Free.
+            Every Gram.{' '}
+            <span className="sourcing__title-accent">Fully Traceable.</span>{' '}
+            Conflict-Free.
           </h2>
 
           <p className="sourcing__text sourcing__text--two">

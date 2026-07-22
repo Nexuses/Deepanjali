@@ -1,12 +1,16 @@
 import Image from 'next/image';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
+import type { IconType } from 'react-icons';
 
 const LOGO_SRC =
   'https://nexuses.s3.us-east-2.amazonaws.com/Group_9__1__1784610916350_h8av.png';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
+  { label: 'Why Us', href: '/why-us' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const serviceLinks = [
@@ -22,39 +26,44 @@ const policyLinks = [
   { label: 'AML Policy', href: '#aml' },
 ];
 
-type SocialType = 'instagram' | 'linkedin' | 'facebook';
+const socialLinks: {
+  type: 'instagram' | 'linkedin' | 'facebook';
+  label: string;
+  href: string;
+  Icon: IconType;
+}[] = [
+  {
+    type: 'instagram',
+    label: 'Instagram',
+    href: '#instagram',
+    Icon: FaInstagram,
+  },
+  {
+    type: 'linkedin',
+    label: 'LinkedIn',
+    href: '#linkedin',
+    Icon: FaLinkedinIn,
+  },
+  {
+    type: 'facebook',
+    label: 'Facebook',
+    href: '#facebook',
+    Icon: FaFacebookF,
+  },
+];
 
-function SocialIcon({ type }: { type: SocialType }) {
+function SocialIcon({
+  label,
+  href,
+  Icon,
+}: {
+  label: string;
+  href: string;
+  Icon: IconType;
+}) {
   return (
-    <a
-      className="footer__social"
-      href={`#${type}`}
-      aria-label={type}
-    >
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="10.5" stroke="currentColor" strokeWidth="1.2" />
-        {type === 'instagram' && (
-          <g stroke="currentColor" strokeWidth="1.2" strokeLinecap="round">
-            <rect x="8" y="8" width="8" height="8" rx="2" />
-            <circle cx="12" cy="12" r="2" />
-            <circle cx="15.2" cy="8.8" r="0.6" fill="currentColor" stroke="none" />
-          </g>
-        )}
-        {type === 'linkedin' && (
-          <g fill="currentColor" stroke="none">
-            <rect x="8" y="10.5" width="1.8" height="5.5" />
-            <circle cx="8.9" cy="8.4" r="1" />
-            <path d="M12 16V12.2c0-1.2.8-2 1.9-2 1.1 0 1.6.7 1.6 2V16h1.8v-4.2c0-2.3-1.2-3.4-2.9-3.4-1.3 0-2 .7-2.3 1.2h-.1V10.5H12z" />
-          </g>
-        )}
-        {type === 'facebook' && (
-          <path
-            d="M13.2 17v-4.2h1.4l.2-1.7h-1.6V9.9c0-.5.2-.9.9-.9h.8V7.1c-.1 0-.6-.1-1.2-.1-1.2 0-2 .7-2 2v1.1H10.4v1.7h1.3V17h1.5z"
-            fill="currentColor"
-            stroke="none"
-          />
-        )}
-      </svg>
+    <a className="footer__social" href={href} aria-label={label}>
+      <Icon aria-hidden="true" />
     </a>
   );
 }
@@ -118,9 +127,14 @@ export default function Footer() {
           </p>
 
           <div className="footer__socials">
-            <SocialIcon type="instagram" />
-            <SocialIcon type="linkedin" />
-            <SocialIcon type="facebook" />
+            {socialLinks.map((social) => (
+              <SocialIcon
+                key={social.type}
+                label={social.label}
+                href={social.href}
+                Icon={social.Icon}
+              />
+            ))}
           </div>
 
           <nav className="footer__policies" aria-label="Legal">

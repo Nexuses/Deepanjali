@@ -1,3 +1,11 @@
+import {
+  Building2,
+  ChevronRight,
+  CircleDollarSign,
+  ClipboardCheck,
+  type LucideIcon,
+} from 'lucide-react';
+
 const steps = [
   {
     number: '01',
@@ -37,50 +45,19 @@ const steps = [
   },
 ];
 
-function StepIcon({ type }: { type: (typeof steps)[number]['icon'] }) {
+type StepIconType = (typeof steps)[number]['icon'];
+
+const stepIcons: Record<StepIconType, LucideIcon> = {
+  compliance: ClipboardCheck,
+  rate: CircleDollarSign,
+  settlement: Building2,
+};
+
+function StepIcon({ type }: { type: StepIconType }) {
+  const Icon = stepIcons[type];
   return (
     <span className="execution-workflow__icon" aria-hidden="true">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="24" r="24" fill="rgba(201, 166, 93, 0.18)" />
-        {type === 'compliance' && (
-          <g
-            stroke="#C9A65D"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <rect x="15" y="12" width="18" height="24" rx="2" />
-            <path d="M19 12.5V11a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.5" />
-            <path d="M19 22h10M19 27h10M19 32h6" />
-            <circle cx="31" cy="33" r="5.5" fill="#F7F3EE" />
-            <path d="M28.6 33.1l1.7 1.7 3.4-3.6" />
-          </g>
-        )}
-        {type === 'rate' && (
-          <g
-            stroke="#C9A65D"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="24" cy="24" r="11" />
-            <path d="M24 16v16M18 20.5c1.8-1.6 3.8-2.4 6-2.4 3.4 0 5.8 1.6 5.8 4.1S27.4 26.3 24 26.3c-3.5 0-6 1.5-6 4.1 0 2.5 2.6 4.1 6.2 4.1 2.1 0 4-.7 5.6-2" />
-          </g>
-        )}
-        {type === 'settlement' && (
-          <g
-            stroke="#C9A65D"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M12 34V22l12-8 12 8v12" />
-            <path d="M12 34h24" />
-            <path d="M18 34V24h5v10M25 34V22h5v12" />
-            <path d="M21 18h6" />
-          </g>
-        )}
-      </svg>
+      <Icon />
     </span>
   );
 }
@@ -128,15 +105,7 @@ export default function ExecutionWorkflowSection() {
                   className="execution-workflow__arrow"
                   aria-hidden="true"
                 >
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path
-                      d="M9 6l6 6-6 6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <ChevronRight />
                 </span>
               ) : null}
             </li>

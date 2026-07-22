@@ -1,3 +1,6 @@
+import { Mail, Phone, type LucideIcon } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa6';
+
 const channels = [
   {
     label: 'Direct Trading Desk',
@@ -8,6 +11,7 @@ const channels = [
       type: 'status' as const,
       value: 'DESK ACTIVE — 24 HOURS',
     },
+    icon: 'phone' as const,
   },
   {
     label: 'WhatsApp Business',
@@ -20,6 +24,7 @@ const channels = [
       href: 'https://wa.me/',
     },
     showArrow: true,
+    icon: 'whatsapp' as const,
   },
   {
     label: 'Secure Email',
@@ -27,8 +32,29 @@ const channels = [
     primaryHref: 'mailto:trading@dipanjaligold.com',
     text: 'For formal trade documentation, KYC submissions, and structured correspondence',
     footer: null,
+    icon: 'mail' as const,
   },
 ];
+
+type ChannelIconType = (typeof channels)[number]['icon'];
+
+function ChannelIcon({ type }: { type: ChannelIconType }) {
+  if (type === 'whatsapp') {
+    return (
+      <FaWhatsapp
+        className="trade-desk-channels__channel-icon"
+        aria-hidden="true"
+      />
+    );
+  }
+
+  const icons: Record<'phone' | 'mail', LucideIcon> = {
+    phone: Phone,
+    mail: Mail,
+  };
+  const Icon = icons[type];
+  return <Icon className="trade-desk-channels__channel-icon" aria-hidden="true" />;
+}
 
 export default function TradeDeskChannelsSection() {
   return (
@@ -41,6 +67,7 @@ export default function TradeDeskChannelsSection() {
           {channels.map((channel) => (
             <li key={channel.label} className="trade-desk-channels__card">
               <p className="trade-desk-channels__label">
+                <ChannelIcon type={channel.icon} />
                 {channel.label}
                 {channel.showArrow ? (
                   <span

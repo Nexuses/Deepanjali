@@ -1,6 +1,14 @@
 'use client';
 
 import { FormEvent, type ReactNode } from 'react';
+import {
+  Clock,
+  Coins,
+  Factory,
+  FileCheck,
+  TrendingUp,
+  type LucideIcon,
+} from 'lucide-react';
 
 const services = [
   {
@@ -25,84 +33,19 @@ const services = [
   },
 ];
 
-function ServiceIcon({ type }: { type: (typeof services)[number]['icon'] }) {
-  return (
-    <svg
-      className="private-advisory__service-icon"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      {type === 'hedging' && (
-        <g
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 16l5-5 3.5 3.5L20 7" />
-          <path d="M15 7h5v5" />
-        </g>
-      )}
-      {type === 'procurement' && (
-        <g
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect x="6" y="4" width="12" height="16" rx="1.5" />
-          <path d="M9 9h6M9 13h6M9 17h4" />
-          <circle cx="17" cy="17" r="3.2" fill="currentColor" opacity="0.12" />
-          <path d="M15.8 17.1l.9.9 1.7-1.9" />
-        </g>
-      )}
-      {type === 'refinery' && (
-        <g
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 20V10l5 3V8l5 3V6l6 4v10" />
-          <path d="M4 20h16" />
-        </g>
-      )}
-      {type === 'wealth' && (
-        <g
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M8 10c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 5-4 5-4 1.3-4 3 1.8 3 4 3 4-1.3 4-3" />
-          <path d="M12 4v2M12 18v2" />
-          <path d="M16 14.5l3 1.5v2.5l-3 1.5-3-1.5V16z" />
-        </g>
-      )}
-    </svg>
-  );
-}
+type ServiceIconType = (typeof services)[number]['icon'];
 
-function ClockIcon() {
+const serviceIcons: Record<ServiceIconType, LucideIcon> = {
+  hedging: TrendingUp,
+  procurement: FileCheck,
+  refinery: Factory,
+  wealth: Coins,
+};
+
+function ServiceIcon({ type }: { type: ServiceIconType }) {
+  const Icon = serviceIcons[type];
   return (
-    <svg
-      className="private-advisory__note-icon"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
-      <path
-        d="M12 7.5V12l3.2 2"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <Icon className="private-advisory__service-icon" aria-hidden="true" />
   );
 }
 
@@ -298,7 +241,7 @@ export default function PrivateAdvisorySection() {
             </div>
 
             <div className="private-advisory__note">
-              <ClockIcon />
+              <Clock className="private-advisory__note-icon" aria-hidden="true" />
               <p>
                 <strong>Confirmation within 24 hours:</strong> A senior desk
                 strategist will confirm your session time and send a

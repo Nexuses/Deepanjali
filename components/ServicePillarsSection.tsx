@@ -34,7 +34,7 @@ export default function ServicePillarsSection() {
           <span className="service-pillars__rule" aria-hidden="true" />
           <p className="service-pillars__text">
             Dipanjali Gold Trading operates as a full-service institutional
-            precious metals partner – not a broker, not a marketplace. We hold
+            precious metals partner — not a broker, not a marketplace. We hold
             inventory, execute principal trades, certify purity, manage secure
             storage, and coordinate insured logistics across every transaction we
             facilitate. Every pillar of our service architecture is designed to

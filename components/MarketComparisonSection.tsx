@@ -1,3 +1,5 @@
+import { Check, X } from 'lucide-react';
+
 const rows = [
   {
     feature: 'Pricing tied to live spot rate',
@@ -49,16 +51,7 @@ const rows = [
 function CheckIcon() {
   return (
     <span className="market-comparison__check" aria-label="Yes">
-      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="14" fill="currentColor" />
-        <path
-          d="M8.4 14.2l3.5 3.5 7.7-7.7"
-          stroke="#ffffff"
-          strokeWidth="2.1"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <Check />
     </span>
   );
 }
@@ -66,7 +59,7 @@ function CheckIcon() {
 function CrossIcon() {
   return (
     <span className="market-comparison__cross" aria-label="No">
-      ×
+      <X />
     </span>
   );
 }

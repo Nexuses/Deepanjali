@@ -1,4 +1,11 @@
 import Image from 'next/image';
+import {
+  Globe,
+  HandCoins,
+  LockKeyhole,
+  Truck,
+  type LucideIcon,
+} from 'lucide-react';
 
 const VAULTING_IMAGE =
   'https://nexuses.s3.us-east-2.amazonaws.com/multiethnic-workers-team-tracking-inventory-using-bar-code-systems_1_1784630586100_f20e.png';
@@ -26,99 +33,20 @@ const features = [
   },
 ];
 
-function FeatureIcon({ type }: { type: (typeof features)[number]['icon'] }) {
+type FeatureIconType = (typeof features)[number]['icon'];
+
+const featureIcons: Record<FeatureIconType, LucideIcon> = {
+  storage: HandCoins,
+  insurance: Globe,
+  logistics: Truck,
+  vault: LockKeyhole,
+};
+
+function FeatureIcon({ type }: { type: FeatureIconType }) {
+  const Icon = featureIcons[type];
   return (
     <span className="service-vaulting__icon" aria-hidden="true">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {type === 'storage' && (
-          <>
-            <path
-              d="M8 14c0-2.2 3.6-4 8-4s8 1.8 8 4c0 1.5-1.5 2.8-3.8 3.5L18 24h-4l-2.2-6.5C9.5 16.8 8 15.5 8 14z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <circle cx="13.5" cy="13.5" r="2.2" stroke="currentColor" strokeWidth="1.3" />
-            <circle cx="18.5" cy="13.5" r="2.2" stroke="currentColor" strokeWidth="1.3" />
-            <circle cx="16" cy="16.8" r="2.2" stroke="currentColor" strokeWidth="1.3" />
-          </>
-        )}
-        {type === 'insurance' && (
-          <>
-            <circle cx="16" cy="16" r="10" stroke="currentColor" strokeWidth="1.5" />
-            <ellipse
-              cx="16"
-              cy="16"
-              rx="4.5"
-              ry="10"
-              stroke="currentColor"
-              strokeWidth="1.35"
-            />
-            <path
-              d="M6.5 16h19M7.8 11.5h16.4M7.8 20.5h16.4"
-              stroke="currentColor"
-              strokeWidth="1.3"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'logistics' && (
-          <>
-            <path
-              d="M5 18h12v-6H5v6z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M17 15h4.5l3 3H17v-3z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <circle cx="9" cy="21.5" r="2" stroke="currentColor" strokeWidth="1.4" />
-            <circle cx="20.5" cy="21.5" r="2" stroke="currentColor" strokeWidth="1.4" />
-            <path
-              d="M11 21.5h7.5"
-              stroke="currentColor"
-              strokeWidth="1.3"
-              strokeLinecap="round"
-            />
-            <path
-              d="M7 12V9.5h6V12"
-              stroke="currentColor"
-              strokeWidth="1.3"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-        {type === 'vault' && (
-          <>
-            <rect
-              x="7"
-              y="8"
-              width="18"
-              height="16"
-              rx="2"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <circle cx="16" cy="16" r="3.2" stroke="currentColor" strokeWidth="1.45" />
-            <path
-              d="M16 12.8v6.4M12.8 16h6.4"
-              stroke="currentColor"
-              strokeWidth="1.35"
-              strokeLinecap="round"
-            />
-            <path
-              d="M10 11h2M20 11h2"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-            />
-          </>
-        )}
-      </svg>
+      <Icon strokeWidth={1.5} />
     </span>
   );
 }
@@ -131,7 +59,7 @@ export default function ServiceVaultingSection() {
     >
       <div className="service-vaulting__inner">
         <div className="service-vaulting__copy">
-          <div className="service-vaulting__labelBlock">
+          <div className="service-vaulting__header">
             <span className="service-vaulting__badge" aria-hidden="true">
               C
             </span>
