@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 const paragraphs = [
-  'Dipanjali Gold Trading was built on a single conviction — that institutional-grade precious metals dealing demands more than market access. It demands accountability, certified purity, and relationships built on complete transparency.',
-  'We operate as a principal counterparty across the full lifecycle of physical gold — from sourcing and assay certification through to wholesale distribution, allocated vaulting, and regulatory-compliant settlement. Every transaction we execute is backed by documented chain of custody and independent fineness verification.',
+  'Dipanjali Gold Trading was built on a single conviction - that institutional-grade precious metals dealing demands more than market access. It demands accountability, certified purity, and relationships built on complete transparency.',
+  'We operate as a principal counterparty across the full lifecycle of physical gold - from sourcing and assay certification through to wholesale distribution, allocated vaulting, and regulatory-compliant settlement. Every transaction we execute is backed by documented chain of custody and independent fineness verification.',
   'Our clients are manufacturers, treasury desks, wealth managers, and trading houses who require a partner that performs with the same rigour they apply to their own operations.',
 ];
 

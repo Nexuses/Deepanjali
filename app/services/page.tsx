@@ -12,7 +12,7 @@ import ServicesHero from '@/components/ServicesHero';
 export const metadata: Metadata = {
   title: 'Services | Dipanjali Gold & Trading',
   description:
-    'End-to-end execution across the gold value chain — wholesale distribution, metallurgical assaying, and institutional vaulting.',
+    'End-to-end execution across the gold value chain - wholesale distribution, metallurgical assaying, and institutional vaulting.',
 };
 
 export default function ServicesPage() {

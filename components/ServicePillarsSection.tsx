@@ -33,15 +33,24 @@ export default function ServicePillarsSection() {
           </h2>
           <span className="service-pillars__rule" aria-hidden="true" />
           <p className="service-pillars__text">
-            Dipanjali Gold Trading operates as a full-service institutional
-            precious metals partner — not a broker, not a marketplace. We hold
-            inventory, execute principal trades, certify purity, manage secure
-            storage, and coordinate insured logistics across every transaction we
-            facilitate. Every pillar of our service architecture is designed to
-            eliminate the operational friction, counterparty opacity, and purity
-            uncertainty that characterises the regional bullion market. Our
-            clients engage us because they need a partner that performs with the
-            same rigour they apply to their own operations.
+            <span className="service-pillars__line">
+              Dipanjali Gold Trading operates as a full-service institutional
+              precious metals partner - not a broker, not a marketplace.
+            </span>
+            <span className="service-pillars__line">
+              We hold inventory, execute principal trades, certify purity,
+              manage secure storage, and coordinate insured logistics across
+              every transaction we facilitate.
+            </span>
+            <span className="service-pillars__line">
+              Every pillar of our service architecture is designed to eliminate
+              the operational friction, counterparty opacity, and purity
+              uncertainty that characterises the regional bullion market.
+            </span>
+            <span className="service-pillars__line">
+              Our clients engage us because they need a partner that performs
+              with the same rigour they apply to their own operations.
+            </span>
           </p>
         </div>
       </div>

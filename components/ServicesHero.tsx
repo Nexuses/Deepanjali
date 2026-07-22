@@ -43,7 +43,7 @@ export default function ServicesHero() {
         </h1>
         <p className="services-hero__lede">
           From LBMA-certified wholesale distribution to state-of-the-art
-          metallurgical assaying and institutional vaulting — every service we
+          metallurgical assaying and institutional vaulting - every service we
           offer is built around one principle: zero compromise on purity,
           security, and counterparty integrity.
         </p>

@@ -13,17 +13,17 @@ const BULLION_IMAGE =
 const features = [
   {
     title: 'LBMA-CERTIFIED SOURCE REFINERIES',
-    text: 'All bullion sourced exclusively from London Bullion Market Association certified and internationally recognised refineries — zero unverified supply.',
+    text: 'All bullion sourced exclusively from London Bullion Market Association certified and internationally recognised refineries - zero unverified supply.',
     icon: 'refinery' as const,
   },
   {
-    title: 'FULL INVENTORY RANGE: 1G — 1KG',
+    title: 'FULL INVENTORY RANGE: 1G - 1KG',
     text: 'Minted and cast bars across all standard weights, plus investment coins. Accommodating both granular jewellery manufacturer requirements and large treasury allocations.',
     icon: 'inventory' as const,
   },
   {
     title: 'CONTINUOUS EXECUTION CAPACITY',
-    text: 'Deep capital reserves support large-scale physical delivery even through periods of high market volatility — no execution gaps, no delayed fulfilment.',
+    text: 'Deep capital reserves support large-scale physical delivery even through periods of high market volatility - no execution gaps, no delayed fulfilment.',
     icon: 'execution' as const,
   },
   {

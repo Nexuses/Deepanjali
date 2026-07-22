@@ -13,7 +13,7 @@ const ASSAY_IMAGE =
 const features = [
   {
     title: 'XRF & FIRE ASSAY ANALYSIS',
-    text: 'State-of-the-art X-ray Fluorescence and fire assay chemical analysis delivers exact, verifiable fineness metrics for every lot submitted — no approximations.',
+    text: 'State-of-the-art X-ray Fluorescence and fire assay chemical analysis delivers exact, verifiable fineness metrics for every lot submitted - no approximations.',
     icon: 'assay' as const,
   },
   {
@@ -28,7 +28,7 @@ const features = [
   },
   {
     title: 'FULL COMPOSITION TRANSPARENCY',
-    text: 'Detailed material composition report issued with every assay — covering gold, silver, and base metal content. Documentation provided for audit and compliance use.',
+    text: 'Detailed material composition report issued with every assay - covering gold, silver, and base metal content. Documentation provided for audit and compliance use.',
     icon: 'composition' as const,
   },
 ];

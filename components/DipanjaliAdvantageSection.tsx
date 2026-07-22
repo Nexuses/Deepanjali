@@ -4,7 +4,7 @@ const pillars = [
   {
     title: 'Institutional Market Spreads',
     description:
-      'By leveraging deep global liquidity lines, we eliminate unnecessary intermediary markups entirely. Our clients transact on tight, institutional-grade buy/sell spreads tied directly to live global spot prices — the same spreads available to tier-one institutional desks, accessible to our counter parties regardless of transaction size.',
+      'By leveraging deep global liquidity lines, we eliminate unnecessary intermediary markups entirely. Our clients transact on tight, institutional-grade buy/sell spreads tied directly to live global spot prices - the same spreads available to tier-one institutional desks, accessible to our counter parties regardless of transaction size.',
     link: 'Zero Premium Pricing',
     image:
       'https://nexuses.s3.us-east-2.amazonaws.com/bitcoin-trading-analysis-laptop_1_1784634157975_vgrl.png',
@@ -22,7 +22,7 @@ const pillars = [
   {
     title: 'Dedicated Relationship Desks',
     description:
-      'We reject automated delay loops entirely. High-volume counterparties and institutional accounts are paired with an expert bullion dealer — a named professional who manages their order flow, margin positions, and settlement requirements. Seamless execution, no queues, no escalation chains.',
+      'We reject automated delay loops entirely. High-volume counterparties and institutional accounts are paired with an expert bullion dealer - a named professional who manages their order flow, margin positions, and settlement requirements. Seamless execution, no queues, no escalation chains.',
     link: 'Named Dealer Assignment',
     image:
       'https://nexuses.s3.us-east-2.amazonaws.com/young-business-owners-preparing-their-store_1_1784634157975_405d.png',
@@ -31,7 +31,7 @@ const pillars = [
   {
     title: 'Certified Purity Standards',
     description:
-      'Every asset entering or exiting our vault system carries official, independent assay documentation. We guarantee exact fineness metrics — 999.9 fine gold — across all commercial transactions. No estimations, no approximations, no unverified lots accepted into or released from our ecosystem.',
+      'Every asset entering or exiting our vault system carries official, independent assay documentation. We guarantee exact fineness metrics - 999.9 fine gold - across all commercial transactions. No estimations, no approximations, no unverified lots accepted into or released from our ecosystem.',
     link: '999.9 Guaranteed',
     image:
       'https://nexuses.s3.us-east-2.amazonaws.com/aesthetic-wallpaper-with-gold-bars-high-angle_1_1784634157975_zznw.png',

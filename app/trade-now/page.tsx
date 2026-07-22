@@ -9,7 +9,7 @@ import TradeNowHero from '@/components/TradeNowHero';
 export const metadata: Metadata = {
   title: 'Trade Now | Dipanjali Gold & Trading',
   description:
-    'Execute today on Dipanjali’s institutional trading desk — live bid/ask pricing, immediate execution, and zero intermediary markup.',
+    'Execute today on Dipanjali’s institutional trading desk - live bid/ask pricing, immediate execution, and zero intermediary markup.',
 };
 
 export default function TradeNowPage() {

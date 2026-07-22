@@ -13,7 +13,7 @@ export default function ReadyToTransactSection() {
         </h2>
 
         <p className="ready-transact__text">
-          Connect directly with our institutional desk — no queues, no
+          Connect directly with our institutional desk - no queues, no
           intermediaries, no delays.
         </p>
 

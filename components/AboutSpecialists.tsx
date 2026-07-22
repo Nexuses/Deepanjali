@@ -2,7 +2,7 @@ const specialists = [
   {
     name: 'Rajiv Mehta',
     role: 'Managing Director',
-    bio: 'With over two decades of institutional bullion trading experience across Mumbai and Dubai, Rajiv built Dipanjali on a single conviction — that institutional-grade precious metals dealing demands absolute accountability. He leads all principal trading operations and counterparty relationships.',
+    bio: 'With over two decades of institutional bullion trading experience across Mumbai and Dubai, Rajiv built Dipanjali on a single conviction - that institutional-grade precious metals dealing demands absolute accountability. He leads all principal trading operations and counterparty relationships.',
   },
   {
     name: 'Priya Anand',

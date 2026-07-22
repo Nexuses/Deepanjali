@@ -25,13 +25,13 @@ const objections = [
     icon: 'storage' as const,
     question: 'What happens to my metal if something goes wrong during storage?',
     answer:
-      'Your allocated holdings are covered under a comprehensive all-risk insurance policy at full replacement value. Your metal is segregated never co-mingled — and independently auditable at any time.',
+      'Your allocated holdings are covered under a comprehensive all-risk insurance policy at full replacement value. Your metal is segregated never co-mingled - and independently auditable at any time.',
   },
   {
     icon: 'execution' as const,
     question: 'How quickly can a large order actually be executed?',
     answer:
-      'Our deep capital reserves and continuous inventory position allow immediate large-volume execution at a fixed spot rate. Your dealer confirms, you approve, settlement follows — no external sourcing delays.',
+      'Our deep capital reserves and continuous inventory position allow immediate large-volume execution at a fixed spot rate. Your dealer confirms, you approve, settlement follows - no external sourcing delays.',
   },
   {
     icon: 'compliance' as const,

@@ -114,8 +114,8 @@ export default function TradeFormsSection() {
                   Select expected volume
                 </option>
                 <option value="under-1cr">Under ₹1 Cr</option>
-                <option value="1-5cr">₹1 Cr – ₹5 Cr</option>
-                <option value="5-25cr">₹5 Cr – ₹25 Cr</option>
+                <option value="1-5cr">₹1 Cr - ₹5 Cr</option>
+                <option value="5-25cr">₹5 Cr - ₹25 Cr</option>
                 <option value="25cr-plus">₹25 Cr+</option>
               </select>
             </Field>
@@ -187,7 +187,7 @@ export default function TradeFormsSection() {
                 id="trade-metal"
                 name="metal"
                 type="text"
-                placeholder="e.g. Gold 999.9 – 24K Kilo Bar"
+                placeholder="e.g. Gold 999.9 - 24K Kilo Bar"
               />
             </Field>
 

@@ -43,7 +43,7 @@ export default function ContactHero() {
         </h1>
 
         <p className="contact-hero__lede">
-          Every inquiry is handled by a licensed desk professional — not a
+          Every inquiry is handled by a licensed desk professional - not a
           chatbot, not a call centre. Submit your inquiry below or reach us
           directly through our dedicated trading channels.
         </p>

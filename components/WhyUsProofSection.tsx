@@ -1,7 +1,7 @@
 const stats = [
   {
     value: '₹0',
-    text: 'Intermediary markup on any transaction — pricing always tied directly to live global spot rates',
+    text: 'Intermediary markup on any transaction - pricing always tied directly to live global spot rates',
   },
   {
     value: '999.9',
@@ -9,7 +9,7 @@ const stats = [
   },
   {
     value: '24hr',
-    text: 'Live institutional trading desk — continuous execution through market volatility, no automated queues',
+    text: 'Live institutional trading desk - continuous execution through market volatility, no automated queues',
   },
 ];
 
@@ -27,7 +27,7 @@ export default function WhyUsProofSection() {
           <footer className="why-us-proof__attribution">
             <cite>
               <span className="why-us-proof__role">
-                SENIOR TREASURY MANAGER —
+                SENIOR TREASURY MANAGER -
               </span>{' '}
               <span className="why-us-proof__org">
                 PRIVATE WEALTH OFFICE, MUMBAI

@@ -94,13 +94,13 @@ export default function PrivateAdvisorySection() {
           <div className="private-advisory__copy">
             <p>
               For corporate treasury hedging, regular wholesale manufacturing
-              raw material procurement, or high-volume refinery contracts —
+              raw material procurement, or high-volume refinery contracts -
               schedule a private session with our senior desk strategists.
             </p>
             <p>
               We formulate custom liquidity structures, forward pricing options,
               and high-yield refining schedules optimized for your corporate
-              financial parameters. Not a generic consultation — a structured
+              financial parameters. Not a generic consultation - a structured
               commercial arrangement.
             </p>
           </div>
@@ -179,8 +179,8 @@ export default function PrivateAdvisorySection() {
                     Select volume
                   </option>
                   <option value="under-1cr">Under ₹1 Cr</option>
-                  <option value="1-5cr">₹1 Cr – ₹5 Cr</option>
-                  <option value="5-25cr">₹5 Cr – ₹25 Cr</option>
+                  <option value="1-5cr">₹1 Cr - ₹5 Cr</option>
+                  <option value="5-25cr">₹5 Cr - ₹25 Cr</option>
                   <option value="25cr-plus">₹25 Cr+</option>
                 </select>
               </Field>

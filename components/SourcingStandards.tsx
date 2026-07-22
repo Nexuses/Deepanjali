@@ -63,7 +63,7 @@ export default function SourcingStandards() {
             intermediaries.
           </p>
           <p className="sourcing__text sourcing__text--three">
-            This commitment extends beyond compliance — it is a commercial and
+            This commitment extends beyond compliance - it is a commercial and
             moral obligation to our counterparties, our market, and the
             communities connected to the mines and refineries we work with. Every
             batch of metal that enters our facility arrives with documented

@@ -1318,7 +1318,8 @@ a {
 .dipanjali-difference {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   background-color: #fff4d9;
   background-image: url('/images/dipanjali-difference-bg.png');
   background-repeat: no-repeat;
@@ -1336,8 +1337,9 @@ a {
   z-index: 1;
   width: 100%;
   margin: 0 auto;
-  padding: 0 max(clamp(1.75rem, 4.5vw, 4rem), env(safe-area-inset-left))
-    0 max(clamp(1.75rem, 4.5vw, 4rem), env(safe-area-inset-right));
+  padding: 0 max(0.75rem, env(safe-area-inset-left))
+    0 max(0.75rem, env(safe-area-inset-right));
+  box-sizing: border-box;
 }
 
 .dipanjali-difference__eyebrow {
@@ -1381,7 +1383,7 @@ a {
 }
 
 .dipanjali-difference__copy {
-  width: 100%;
+  width: max-content;
   max-width: none;
   margin: 0 auto;
 }
@@ -1397,6 +1399,21 @@ a {
 
 .dipanjali-difference__copy p:last-child {
   margin-bottom: 0;
+}
+
+.dipanjali-difference__line {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .dipanjali-difference__copy {
+    width: 100%;
+  }
+
+  .dipanjali-difference__line {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 560px) {
@@ -2219,6 +2236,7 @@ a {
 
 .service-pillars__body {
   background: #fef5e7;
+  overflow-x: auto;
   padding:
     clamp(3.5rem, 7vw, 5.25rem)
     0;
@@ -2226,11 +2244,12 @@ a {
 
 .service-pillars__bodyInner {
   width: 100%;
-  max-width: 52rem;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 max(1.25rem, env(safe-area-inset-left))
-    0 max(1.25rem, env(safe-area-inset-right));
+  padding: 0 max(0.75rem, env(safe-area-inset-left))
+    0 max(0.75rem, env(safe-area-inset-right));
   text-align: center;
+  box-sizing: border-box;
 }
 
 .service-pillars__eyebrow {
@@ -2274,13 +2293,29 @@ a {
 }
 
 .service-pillars__text {
+  width: max-content;
+  max-width: none;
   margin: 0 auto;
-  max-width: 48rem;
   font-family: var(--font-sans);
   font-size: clamp(0.9rem, 1.1vw, 1rem);
   font-weight: 400;
   line-height: 1.75;
   color: #3a4552;
+}
+
+.service-pillars__line {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .service-pillars__text {
+    width: 100%;
+  }
+
+  .service-pillars__line {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 700px) {
@@ -7753,14 +7788,12 @@ a.trade-desk-channels__primary:focus-visible {
   margin-right: max(var(--page-gutter), env(safe-area-inset-right));
 }
 
-.dipanjali-difference__inner,
 .dipanjali-advantage__inner,
 .market-comparison__inner,
 .industry-objections__inner,
 .why-us-proof__inner,
 .ready-transact__inner,
 .service-pillars__navInner,
-.service-pillars__bodyInner,
 .service-bullion__inner,
 .service-assay__inner,
 .service-vaulting__inner,

@@ -101,19 +101,19 @@ export async function GET() {
     const board = [
       {
         id: 'board-gold-24k',
-        metal: 'Gold 999.9 – 24K',
+        metal: 'Gold 999.9 - 24K',
         detail: 'Per Gram - Kilo Bar',
         ...bidAsk(goldPerGramInr, 0),
       },
       {
         id: 'board-gold-22k',
-        metal: 'Gold 916 – 22K',
+        metal: 'Gold 916 - 22K',
         detail: 'Scrap Basis - Per Gram',
         ...bidAsk(gold22kPerGramInr, 0),
       },
       {
         id: 'board-gold-18k',
-        metal: 'Gold 750 – 18K',
+        metal: 'Gold 750 - 18K',
         detail: 'Scrap Basis - Per Gram',
         ...bidAsk(gold18kPerGramInr, 0),
       },
@@ -125,7 +125,7 @@ export async function GET() {
       },
       {
         id: 'board-gold-tola',
-        metal: 'Gold Tola Bar – 999.9',
+        metal: 'Gold Tola Bar - 999.9',
         detail: 'Per Tola - 11.66g',
         ...bidAsk(goldTolaInr, 0),
       },

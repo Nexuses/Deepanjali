@@ -11,7 +11,7 @@ import WhyUsProofSection from '@/components/WhyUsProofSection';
 export const metadata: Metadata = {
   title: 'Why Us | Dipanjali Gold & Trading',
   description:
-    'Why choose Dipanjali Gold Trading — institutional spreads, certified purity, dedicated relationship desks, and zero compromise on compliance.',
+    'Why choose Dipanjali Gold Trading - institutional spreads, certified purity, dedicated relationship desks, and zero compromise on compliance.',
 };
 
 export default function WhyUsPage() {

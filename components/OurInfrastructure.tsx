@@ -19,7 +19,7 @@ const capabilities = [
   },
   {
     title: '24-Hour Institutional Trading Desk',
-    text: 'Live bid/ask pricing and immediate execution across all precious metals. High-volume counterparties are paired with a dedicated dealer — no automated queues, no settlement delays.',
+    text: 'Live bid/ask pricing and immediate execution across all precious metals. High-volume counterparties are paired with a dedicated dealer - no automated queues, no settlement delays.',
   },
 ];
 

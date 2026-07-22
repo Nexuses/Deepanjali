@@ -9,7 +9,7 @@ const channels = [
     text: 'For immediate rate confirmation and large-volume execution',
     footer: {
       type: 'status' as const,
-      value: 'DESK ACTIVE — 24 HOURS',
+      value: 'DESK ACTIVE - 24 HOURS',
     },
     icon: 'phone' as const,
   },

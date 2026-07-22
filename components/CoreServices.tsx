@@ -7,7 +7,7 @@ const SHOWROOM_SRC =
 const services = [
   {
     title: 'Wholesale Bullion Distribution',
-    text: 'Investment-grade gold and silver bars from LBMA-certified refineries — 1g to 1kg — with continuous execution through market volatility.',
+    text: 'Investment-grade gold and silver bars from LBMA-certified refineries - 1g to 1kg - with continuous execution through market volatility.',
   },
   {
     title: 'Precious Metals Refining & Assay',
@@ -38,7 +38,7 @@ export default function CoreServices() {
           </h2>
           <p className="services__intro">
             From wholesale bullion procurement to end-to-end refining and
-            allocated vaulting — every service is engineered to eliminate
+            allocated vaulting - every service is engineered to eliminate
             intermediary friction and deliver maximum asset yield.
           </p>
 

@@ -36,7 +36,7 @@ const steps = [
     title: 'Physical Settlement',
     text: 'Choose between fully secure physical collection at our primary showroom, insured armoured delivery, or immediate transfer into your allocated vault account.',
     items: [
-      'Secure collection — appointment at our showroom',
+      'Secure collection - appointment at our showroom',
       'Insured armoured delivery to verified address',
       'Transfer to allocated vault account',
       'Full documentation & assay cert issued on delivery',

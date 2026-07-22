@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'About Us | Dipanjali Gold & Trading',
   description:
-    'About Dipanjali Gold Trading — a foundation of uncompromising integrity in institutional precious metals.',
+    'About Dipanjali Gold Trading - a foundation of uncompromising integrity in institutional precious metals.',
 };
 
 export default function AboutPage() {

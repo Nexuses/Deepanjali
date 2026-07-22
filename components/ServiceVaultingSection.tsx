@@ -13,7 +13,7 @@ const VAULTING_IMAGE =
 const features = [
   {
     title: 'ALLOCATED & SEGREGATED STORAGE',
-    text: 'Your metal is held separately — never co-mingled with other client holdings. Allocated storage with full audit access and independent verification available on request.',
+    text: 'Your metal is held separately - never co-mingled with other client holdings. Allocated storage with full audit access and independent verification available on request.',
     icon: 'storage' as const,
   },
   {

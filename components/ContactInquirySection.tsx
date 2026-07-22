@@ -131,7 +131,7 @@ export default function ContactInquirySection() {
               <div className="contactdetails__hours" role="table">
                 <div className="contactdetails__hourRow" role="row">
                   <span className="contactdetails__hourDay" role="cell">
-                    Monday – Friday
+                    Monday - Friday
                   </span>
                   <span className="contactdetails__hourTime" role="cell">
                     24 Hours
@@ -142,7 +142,7 @@ export default function ContactInquirySection() {
                     Saturday
                   </span>
                   <span className="contactdetails__hourTime" role="cell">
-                    9:00 AM – 6:00 PM
+                    9:00 AM - 6:00 PM
                   </span>
                 </div>
                 <div className="contactdetails__hourRow" role="row">

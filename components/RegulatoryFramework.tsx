@@ -15,7 +15,7 @@ type RegulatoryCard = {
 
 const paragraphs = [
   'Operational integrity is our primary asset. Dipanjali Gold Trading enforces rigorous Anti-Money Laundering (AML) and Counter-Terrorism Financing (CFT) protocols fully aligned with international regulatory mandates and Indian regulatory oversight frameworks.',
-  'We deploy institutional-grade Know Your Customer (KYC) onboarding engines to verify all trading partners before any transaction is initiated. Our compliance infrastructure is not a checkbox — it is the backbone of every counterparty relationship we maintain.',
+  'We deploy institutional-grade Know Your Customer (KYC) onboarding engines to verify all trading partners before any transaction is initiated. Our compliance infrastructure is not a checkbox - it is the backbone of every counterparty relationship we maintain.',
 ];
 
 const cards: RegulatoryCard[] = [
@@ -27,7 +27,7 @@ const cards: RegulatoryCard[] = [
   },
   {
     title: 'Institutional KYC Engine',
-    text: 'Accelerated digital onboarding with full counterparty verification — including entity registration, beneficial ownership, and source-of-funds documentation — before any trade is executed.',
+    text: 'Accelerated digital onboarding with full counterparty verification - including entity registration, beneficial ownership, and source-of-funds documentation - before any trade is executed.',
     icon: 'kyc',
     variant: 'dark',
   },

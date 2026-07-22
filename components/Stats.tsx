@@ -29,7 +29,7 @@ export default function Stats() {
           {stats.map((stat) => (
             <li key={stat.title} className="stats__item">
               <p className="stats__value">{stat.value}</p>
-              <h3 className="stats__title">{stat.title} —</h3>
+              <h3 className="stats__title">{stat.title} -</h3>
               <p className="stats__text">{stat.text}</p>
             </li>
           ))}
