@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ContactInquirySection from '@/components/ContactInquirySection';
 import Navbar from '@/components/Navbar';
 
 const CONTACT_HERO_BG =
@@ -32,21 +33,27 @@ export default function ContactHero() {
       <Navbar />
       <div className="contact-hero__rule" aria-hidden="true" />
 
-      <div className="contact-hero__content">
-        <p className="contact-hero__eyebrow">GET IN TOUCH</p>
+      <div className="contact-hero__body">
+        <div className="contact-hero__content">
+          <p className="contact-hero__eyebrow">GET IN TOUCH</p>
 
-        <h1 className="contact-hero__title">
-          <span className="contact-hero__title-line">Connect to the</span>
-          <span className="contact-hero__title-accent">
-            Institutional Desk.
-          </span>
-        </h1>
+          <h1 className="contact-hero__title">
+            <span className="contact-hero__title-line">Connect to the</span>
+            <span className="contact-hero__title-accent">
+              Institutional Desk.
+            </span>
+          </h1>
 
-        <p className="contact-hero__lede">
-          Every inquiry is handled by a licensed desk professional - not a
-          chatbot, not a call centre. Submit your inquiry below or reach us
-          directly through our dedicated trading channels.
-        </p>
+          <p className="contact-hero__lede">
+            Every inquiry is handled by a licensed desk professional - not a
+            chatbot, not a call centre. Submit your inquiry below or reach us
+            directly through our dedicated trading channels.
+          </p>
+        </div>
+
+        <div className="contact-hero__divider" aria-hidden="true" />
+
+        <ContactInquirySection />
       </div>
     </section>
   );

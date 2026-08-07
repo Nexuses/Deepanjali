@@ -2,11 +2,9 @@ import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import ReadyToTransactSection from '@/components/ReadyToTransactSection';
-import ServiceAssaySection from '@/components/ServiceAssaySection';
 import ServiceBullionSection from '@/components/ServiceBullionSection';
 import ServiceComplianceSection from '@/components/ServiceComplianceSection';
 import ServicePillarsSection from '@/components/ServicePillarsSection';
-import ServiceVaultingSection from '@/components/ServiceVaultingSection';
 import ServicesHero from '@/components/ServicesHero';
 
 export const metadata: Metadata = {
@@ -21,8 +19,6 @@ export default function ServicesPage() {
       <ServicesHero />
       <ServicePillarsSection />
       <ServiceBullionSection />
-      <ServiceAssaySection />
-      <ServiceVaultingSection />
       <HowItWorksSection />
       <ServiceComplianceSection />
       <ReadyToTransactSection />

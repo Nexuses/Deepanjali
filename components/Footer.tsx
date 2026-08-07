@@ -115,8 +115,8 @@ export default function Footer() {
             <a className="footer__contact-link" href="mailto:info@dipanjaligold.com">
               info@dipanjaligold.com
             </a>
-            <a className="footer__contact-link" href="tel:+971569901766">
-              +971 56 990 1766
+            <a className="footer__contact-link" href="tel:+97145461616">
+              +971 45 461 616
             </a>
           </div>
         </div>

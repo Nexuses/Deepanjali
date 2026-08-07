@@ -1,7 +1,6 @@
 import ContactActionsSection from '@/components/ContactActionsSection';
 import ContactHero from '@/components/ContactHero';
 import ContactHeadquartersSection from '@/components/ContactHeadquartersSection';
-import ContactInquirySection from '@/components/ContactInquirySection';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -14,7 +13,6 @@ export default function ContactPage() {
   return (
     <main className="page">
       <ContactHero />
-      <ContactInquirySection />
       <ContactHeadquartersSection />
       <ContactActionsSection />
       <Footer />

@@ -1,18 +1,18 @@
 const specialists = [
   {
-    name: 'Rajiv Mehta',
-    role: 'Managing Director',
-    bio: 'With over two decades of institutional bullion trading experience across Mumbai and Dubai, Rajiv built Dipanjali on a single conviction - that institutional-grade precious metals dealing demands absolute accountability. He leads all principal trading operations and counterparty relationships.',
+    name: '[Name1]',
+    role: 'Head of Trading',
+    bio: 'Over two decades of experience on institutional bullion desks across Mumbai and Dubai. Leads our wholesale allocation strategy and tier-one liquidity relationships.',
   },
   {
-    name: 'Priya Anand',
-    role: 'Head of Compliance & Governance',
-    bio: 'Priya architects and enforces Dipanjali’s AML-CFT and KYC compliance infrastructure. Her background spans regulatory advisory and financial crime prevention across India’s leading financial institutions. She ensures every counterparty relationship meets international compliance standards before any trade is executed.',
+    name: '[Name2]',
+    role: 'Compliance & KYC Officer',
+    bio: 'Architect of our AML-CFT onboarding framework and conflict-free supply chain policy. Ensures every counterparty meets our stringent regulatory standards.',
   },
   {
-    name: 'Anand Iyer',
-    role: 'Senior Bullion Dealer',
-    bio: 'Anand manages live desk execution, wholesale order flow, and institutional client relationships. With deep expertise in physical settlement, yield optimization, and scrap assay protocols, he is the operational anchor for Dipanjali’s high-volume trading counterparties.',
+    name: '[Name3]',
+    role: 'Chief Assay Officer',
+    bio: 'Certified metallurgist specializing in XRF and fire assay analysis. Guarantees certified 999.9 fine purity across every lot processed through our facilities.',
   },
 ];
 
@@ -31,13 +31,13 @@ function PortraitPlaceholder() {
           width="77"
           height="53"
           rx="2"
-          stroke="#a8b0b8"
+          stroke="#9aa3ad"
           strokeWidth="1.5"
         />
-        <circle cx="28" cy="20" r="6" stroke="#a8b0b8" strokeWidth="1.5" />
+        <circle cx="28" cy="20" r="6" stroke="#9aa3ad" strokeWidth="1.5" />
         <path
           d="M8 44l18-16 10 9 12-14 24 21"
-          stroke="#a8b0b8"
+          stroke="#9aa3ad"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -68,6 +68,9 @@ export default function AboutSpecialists() {
               <h3 className="specialists__name">{person.name}</h3>
               <p className="specialists__role">{person.role}</p>
               <p className="specialists__bio">{person.bio}</p>
+              <a className="specialists__link" href="/contact">
+                Learn More
+              </a>
             </li>
           ))}
         </ul>

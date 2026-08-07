@@ -1,8 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
+
+const DESK_PHONE = '+971 45 461 616';
+const DESK_PHONE_TEL = '+97145461616';
+const DESK_EMAIL = 'info@dipanjaligold.com';
+const WHATSAPP_HREF = `https://wa.me/${DESK_PHONE_TEL.replace('+', '')}`;
 
 function Field({
   label,
@@ -44,9 +49,9 @@ export default function ContactInquirySection() {
                   </span>
                   <a
                     className="contactdetails__link"
-                    href="tel:+971569901766"
+                    href={`tel:${DESK_PHONE_TEL}`}
                   >
-                    +971 56 990 1766
+                    {DESK_PHONE}
                   </a>
                 </div>
                 <div className="contactdetails__row">
@@ -55,9 +60,9 @@ export default function ContactInquirySection() {
                   </span>
                   <a
                     className="contactdetails__link"
-                    href="mailto:info@dipanjaligold.com"
+                    href={`mailto:${DESK_EMAIL}`}
                   >
-                    info@dipanjaligold.com
+                    {DESK_EMAIL}
                   </a>
                 </div>
               </div>
@@ -80,7 +85,7 @@ export default function ContactInquirySection() {
 
               <a
                 className="contactdetails__waBtn"
-                href="https://wa.me/971569901766"
+                href={WHATSAPP_HREF}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -88,33 +93,6 @@ export default function ContactInquirySection() {
                   <FaWhatsapp size={18} />
                 </span>
                 MESSAGE ON WHATSAPP
-              </a>
-            </div>
-
-            <div className="contactdetails__divider" aria-hidden="true" />
-
-            <div className="contactdetails__block">
-              <p className="contactdetails__overline contactdetails__overline--gold">
-                CORPORATE HEADQUARTERS
-              </p>
-              <h3 className="contactdetails__heading contactdetails__heading--gold">
-                Visit Our Office
-              </h3>
-              <p className="contactdetails__p">
-                Secure transit drop-off and parking available. Appointments
-                preferred for in-person meetings.
-              </p>
-
-              <a
-                className="contactdetails__mapBtn"
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="contactdetails__mapIcon" aria-hidden="true">
-                  <MapPin size={16} strokeWidth={1.75} />
-                </span>
-                VIEW ON MAP
               </a>
             </div>
 
@@ -131,8 +109,9 @@ export default function ContactInquirySection() {
               <div className="contactdetails__hours" role="table">
                 <div className="contactdetails__hourRow" role="row">
                   <span className="contactdetails__hourDay" role="cell">
-                    Monday - Friday
+                    Monday – Friday
                   </span>
+                  <span className="contactdetails__hourLead" aria-hidden="true" />
                   <span className="contactdetails__hourTime" role="cell">
                     24 Hours
                   </span>
@@ -141,24 +120,9 @@ export default function ContactInquirySection() {
                   <span className="contactdetails__hourDay" role="cell">
                     Saturday
                   </span>
+                  <span className="contactdetails__hourLead" aria-hidden="true" />
                   <span className="contactdetails__hourTime" role="cell">
-                    9:00 AM - 6:00 PM
-                  </span>
-                </div>
-                <div className="contactdetails__hourRow" role="row">
-                  <span className="contactdetails__hourDay" role="cell">
-                    Sunday
-                  </span>
-                  <span className="contactdetails__hourTime" role="cell">
-                    By Appointment
-                  </span>
-                </div>
-                <div className="contactdetails__hourRow" role="row">
-                  <span className="contactdetails__hourDay" role="cell">
-                    Public Holidays
-                  </span>
-                  <span className="contactdetails__hourTime" role="cell">
-                    Emergency Desk Available
+                    9:00 AM – 4:00 PM
                   </span>
                 </div>
               </div>
@@ -211,19 +175,19 @@ export default function ContactInquirySection() {
                   <textarea
                     className="contactform__textarea"
                     name="message"
-                    rows={6}
+                    rows={5}
                   />
                 </Field>
               </div>
 
-              <div className="contactform__sla">
+              <p className="contactform__sla">
                 <strong className="contactform__slaTitle">
                   24-Hour Response SLA.
                 </strong>{' '}
                 All inbound inquiries submitted through our secure channel are
                 assigned tracking protocols and addressed by a licensed desk
                 professional within 24 business hours.
-              </div>
+              </p>
 
               <button className="contactform__submit" type="submit">
                 SUBMIT INQUIRY

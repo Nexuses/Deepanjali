@@ -23,29 +23,30 @@ export default function DipanjaliDifferenceSection() {
         <div className="dipanjali-difference__copy">
           <p>
             <span className="dipanjali-difference__line">
-              Most regional bullion dealers operate as brokers - sourcing on
+              Most regional bullion dealers operate as brokers — sourcing on
               demand, marking up through intermediaries, and leaving counter
-              parties with limited visibility into what they actually hold.
+              parties
             </span>
             <span className="dipanjali-difference__line">
-              Dipanjali operates differently. We are a principal in every
-              transaction we execute.
+              with limited visibility into what they actually hold. Dipanjali
+              operates differently. We are a principal in every transaction we
+              execute.
             </span>
           </p>
           <p>
             <span className="dipanjali-difference__line">
               That means we hold the inventory, certify the purity, manage the
               storage, coordinate the logistics, and remain accountable
-              throughout.
+              throughout. No
             </span>
             <span className="dipanjali-difference__line">
-              No hand-offs to unnamed third parties. No opaque pricing. No
-              settlement uncertainty.
+              hand-offs to unnamed third parties. No opaque pricing. No
+              settlement uncertainty. Every counter party we work with
+              transacts with the
             </span>
             <span className="dipanjali-difference__line">
-              Every counter party we work with transacts with the confidence
-              that what they&apos;re buying is exactly what it says it is - and
-              that we stand behind it.
+              confidence that what they&apos;re buying is exactly what it says
+              it is — and that we stand behind it.
             </span>
           </p>
         </div>
