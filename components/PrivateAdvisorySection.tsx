@@ -9,6 +9,7 @@ import {
   TrendingUp,
   type LucideIcon,
 } from 'lucide-react';
+import { CONTACT } from '@/lib/contact';
 
 const services = [
   {
@@ -234,7 +235,7 @@ export default function PrivateAdvisorySection() {
                   id="adv-phone"
                   name="phone"
                   type="tel"
-                  placeholder="+91 XXXXX XXXXX"
+                  placeholder={CONTACT.phoneDisplay}
                   autoComplete="tel"
                 />
               </Field>

@@ -1,11 +1,12 @@
 import { Mail, Phone, type LucideIcon } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
+import { CONTACT } from '@/lib/contact';
 
 const channels = [
   {
     label: 'Direct Trading Desk',
-    primary: '+91 [Desk Number]',
-    primaryHref: 'tel:+91',
+    primary: CONTACT.phoneDisplay,
+    primaryHref: `tel:${CONTACT.phoneTel}`,
     text: 'For immediate rate confirmation and large-volume execution',
     footer: {
       type: 'status' as const,
@@ -21,15 +22,15 @@ const channels = [
     footer: {
       type: 'link' as const,
       value: 'MESSAGE NOW',
-      href: 'https://wa.me/',
+      href: CONTACT.whatsappHref,
     },
     showArrow: true,
     icon: 'whatsapp' as const,
   },
   {
     label: 'Secure Email',
-    primary: 'trading@dipanjaligold.com',
-    primaryHref: 'mailto:trading@dipanjaligold.com',
+    primary: CONTACT.email,
+    primaryHref: `mailto:${CONTACT.email}`,
     text: 'For formal trade documentation, KYC submissions, and structured correspondence',
     footer: null,
     icon: 'mail' as const,

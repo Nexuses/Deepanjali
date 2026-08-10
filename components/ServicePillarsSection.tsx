@@ -1,24 +1,12 @@
 export default function ServicePillarsSection() {
   return (
     <section className="service-pillars" aria-label="Core service pillars">
-      <div className="service-pillars__nav">
-        <div className="service-pillars__navInner service-pillars__navInner--single">
-          <div className="service-pillars__item">
-            <span className="service-pillars__badge" aria-hidden="true">
-              A
-            </span>
-            <p className="service-pillars__itemTitle">Wholesale Bullion</p>
-          </div>
-        </div>
-        <span className="service-pillars__navRule" aria-hidden="true" />
-      </div>
-
       <div className="service-pillars__body">
         <div className="service-pillars__bodyInner">
           <p className="service-pillars__eyebrow">WHAT WE DO</p>
           <h2 className="service-pillars__title">
             <span className="service-pillars__title-line">
-              Three Core Service Pillars.
+              Core Service Pillars.
             </span>
             <span className="service-pillars__title-accent">
               One Principal Commitment.
@@ -29,7 +17,7 @@ export default function ServicePillarsSection() {
             <p>
               <span className="service-pillars__line">
                 Dipanjali Gold Trading operates as a full-service institutional
-                precious metals partner — not a broker, not a marketplace. We
+                precious metals partner - not a broker, not a marketplace. We
                 hold inventory,
               </span>
               <span className="service-pillars__line">

@@ -17,7 +17,7 @@ const steps = [
   {
     number: '4',
     title: 'Physical Settlement',
-    text: 'Choose secure physical collection at our showroom, insured armoured delivery, or direct transfer into your allocated vault account. All options fully insured door-to-door.',
+    text: 'Choose secure physical collection at our showroom or insured armored delivery. All options fully insured door-to-door.',
   },
 ];
 

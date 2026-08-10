@@ -3,11 +3,12 @@
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
+import { CONTACT } from '@/lib/contact';
 
-const DESK_PHONE = '+971 45 461 616';
-const DESK_PHONE_TEL = '+97145461616';
-const DESK_EMAIL = 'info@dipanjaligold.com';
-const WHATSAPP_HREF = `https://wa.me/${DESK_PHONE_TEL.replace('+', '')}`;
+const DESK_PHONE = CONTACT.phoneDisplay;
+const DESK_PHONE_TEL = CONTACT.phoneTel;
+const DESK_EMAIL = CONTACT.email;
+const WHATSAPP_HREF = CONTACT.whatsappHref;
 
 function Field({
   label,
@@ -109,7 +110,7 @@ export default function ContactInquirySection() {
               <div className="contactdetails__hours" role="table">
                 <div className="contactdetails__hourRow" role="row">
                   <span className="contactdetails__hourDay" role="cell">
-                    Monday – Friday
+                    Monday - Friday
                   </span>
                   <span className="contactdetails__hourLead" aria-hidden="true" />
                   <span className="contactdetails__hourTime" role="cell">
@@ -122,7 +123,7 @@ export default function ContactInquirySection() {
                   </span>
                   <span className="contactdetails__hourLead" aria-hidden="true" />
                   <span className="contactdetails__hourTime" role="cell">
-                    9:00 AM – 4:00 PM
+                    9:00 AM - 4:00 PM
                   </span>
                 </div>
               </div>

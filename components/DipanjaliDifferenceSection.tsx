@@ -23,7 +23,7 @@ export default function DipanjaliDifferenceSection() {
         <div className="dipanjali-difference__copy">
           <p>
             <span className="dipanjali-difference__line">
-              Most regional bullion dealers operate as brokers — sourcing on
+              Most regional bullion dealers operate as brokers - sourcing on
               demand, marking up through intermediaries, and leaving counter
               parties
             </span>
@@ -46,7 +46,7 @@ export default function DipanjaliDifferenceSection() {
             </span>
             <span className="dipanjali-difference__line">
               confidence that what they&apos;re buying is exactly what it says
-              it is — and that we stand behind it.
+              it is - and that we stand behind it.
             </span>
           </p>
         </div>

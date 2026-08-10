@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
 const paragraphs = [
-  'Dipanjali Gold Trading operates at the intersection of traditional asset security and modern trading efficiency. Established to bridge global institutional liquidity with localized bullion markets, we serve as a premier counterparty for high-volume traders, industrial jewellery manufacturers, and private wealth managers.',
-  'Our operations are anchored by physical infrastructure, advanced assay technologies, and a trading desk led by market veterans committed to zero-premium spreads and absolute transactional transparency. Every gram that moves through our ecosystem carries verifiable chain of custody and independent fineness certification.',
-  'We are not a marketplace. We are a principal - accountable for every transaction, every certification, and every delivery we execute on behalf of our counterparties.',
+  'Dipanjali Gold Trading operates at the intersection of traditional asset security and modern trading efficiency, aiming to connect global institutional liquidity with localised bullion markets. We serve as a premier counterparty for high-volume traders and private wealth managers.',
+  'Our physical infrastructure, advanced assay technologies, and trading desk led by market veterans are focused on transactional transparency. Every gram traded is verified through a chain of custody and independent fineness certification.',
+  'We are not a marketplace but a principal accountable for every transaction, certification, and delivery executed on behalf of our counterparties.',
 ];
 
 export default function AboutWhoWeAre() {

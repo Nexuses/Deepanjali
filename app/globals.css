@@ -4182,6 +4182,10 @@ a {
   color: var(--contact-hq-ink);
 }
 
+.contact-hq__addressLine {
+  display: block;
+}
+
 .contact-hq__mapArea {
   width: 100%;
   background: #ffffff;

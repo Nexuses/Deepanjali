@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 import type { IconType } from 'react-icons';
+import { CONTACT } from '@/lib/contact';
 
 const LOGO_SRC =
   'https://nexuses.s3.us-east-2.amazonaws.com/Group_9__1__1784610916350_h8av.png';
@@ -106,17 +107,18 @@ export default function Footer() {
           <div className="footer__col">
             <h3 className="footer__heading">Contact</h3>
             <address className="footer__address">
-              Office No. 9, 2nd Floor,
-              <br />
-              Al Shamsi Building, Opp. Hind
-              <br />
-              Plaza 8, Deira Gold Souq, Dubai
+              {CONTACT.addressLines.map((line, i) => (
+                <span key={line}>
+                  {i > 0 ? <br /> : null}
+                  {line}
+                </span>
+              ))}
             </address>
-            <a className="footer__contact-link" href="mailto:info@dipanjaligold.com">
-              info@dipanjaligold.com
+            <a className="footer__contact-link" href={`mailto:${CONTACT.email}`}>
+              {CONTACT.email}
             </a>
-            <a className="footer__contact-link" href="tel:+97145461616">
-              +971 45 461 616
+            <a className="footer__contact-link" href={`tel:${CONTACT.phoneTel}`}>
+              {CONTACT.phoneDisplay}
             </a>
           </div>
         </div>
