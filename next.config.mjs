@@ -16,6 +16,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'nexuses.s3.us-east-2.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.nexuses.xyz',
+      },
     ],
   },
 };
