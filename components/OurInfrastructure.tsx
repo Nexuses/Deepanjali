@@ -10,14 +10,6 @@ const capabilities = [
     text: 'Direct tier-one sourcing of investment-grade bars from LBMA-certified refineries. Inventory spans 1g to 1kg minted and cast bars, with continuous execution capacity through periods of high market volatility.',
   },
   {
-    title: 'Metallurgical Assaying & Refining',
-    text: 'State-of-the-art XRF and fire assay chemical analysis provides complete material composition transparency. Clients receive exact, verified yields with fast financial settlement or direct weight exchange terms.',
-  },
-  {
-    title: 'Allocated Vaulting & Insured Logistics',
-    text: 'Segregated storage in high-security vaulting facilities under comprehensive all-risk insurance coverage. Strategic partnerships with armoured logistics providers guarantee secure end-to-end physical delivery.',
-  },
-  {
     title: '24-Hour Institutional Trading Desk',
     text: 'Live bid/ask pricing and immediate execution across all precious metals. High-volume counterparties are paired with a dedicated dealer - no automated queues, no settlement delays.',
   },

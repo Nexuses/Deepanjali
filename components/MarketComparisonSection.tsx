@@ -12,18 +12,8 @@ const rows = [
     dealer: 'no',
   },
   {
-    feature: 'Independent assay certification',
-    broker: 'Varies',
-    dealer: 'no',
-  },
-  {
     feature: 'AML / CFT compliant operations',
     broker: 'Partial',
-    dealer: 'no',
-  },
-  {
-    feature: 'Allocated vault storage',
-    broker: 'no',
     dealer: 'no',
   },
   {
@@ -39,11 +29,6 @@ const rows = [
   {
     feature: '24-hour institutional trading desk',
     broker: 'no',
-    dealer: 'no',
-  },
-  {
-    feature: 'Comprehensive all-risk insurance',
-    broker: 'Sometimes',
     dealer: 'no',
   },
 ] as const;

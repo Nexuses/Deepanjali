@@ -3,7 +3,6 @@ import LiveSpot from '@/components/LiveSpot';
 import WhoWeAre from '@/components/WhoWeAre';
 import Features from '@/components/Features';
 import CoreServices from '@/components/CoreServices';
-import Specialists from '@/components/Specialists';
 import Testimonial from '@/components/Testimonial';
 import TrustBar from '@/components/TrustBar';
 import Stats from '@/components/Stats';
@@ -17,7 +16,6 @@ export default function HomePage() {
       <WhoWeAre />
       <Features />
       <CoreServices />
-      <Specialists />
       <Testimonial />
       <TrustBar />
       <Stats />

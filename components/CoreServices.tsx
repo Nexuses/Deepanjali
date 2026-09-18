@@ -9,14 +9,6 @@ const services = [
     title: 'Wholesale Bullion Distribution',
     text: 'Investment-grade gold and silver bars from LBMA-certified refineries - 1g to 1kg - with continuous execution through market volatility.',
   },
-  {
-    title: 'Precious Metals Refining & Assay',
-    text: 'XRF and fire assay chemical analysis for scrap gold and industrial lots. Exact verified yields, ultra-fast settlement or direct weight exchange.',
-  },
-  {
-    title: 'Allocated Vaulting & Insured Logistics',
-    text: 'Segregated storage in high-security facilities with all-risk insurance. Armored trans-regional delivery via strategic logistics partners.',
-  },
 ];
 
 function CheckIcon() {
@@ -37,9 +29,9 @@ export default function CoreServices() {
             An overview of the services we offer.
           </h2>
           <p className="services__intro">
-            From wholesale bullion procurement to end-to-end refining and
-            allocated vaulting - every service is engineered to eliminate
-            intermediary friction and deliver maximum asset yield.
+            From wholesale bullion procurement to continuous market execution -
+            every service is engineered to eliminate intermediary friction and
+            deliver maximum asset yield.
           </p>
 
           <div className="services__rule" aria-hidden="true" />
@@ -55,13 +47,6 @@ export default function CoreServices() {
               </li>
             ))}
           </ul>
-
-          <a className="services__cta" href="#services">
-            View All Services
-            <span className="services__cta-arrow" aria-hidden="true">
-              →
-            </span>
-          </a>
         </div>
 
         <div className="services__media">

@@ -16,8 +16,6 @@ const navLinks = [
 
 const serviceLinks = [
   { label: 'Bullion Trading', href: '/services' },
-  { label: 'Assaying Services', href: '/services' },
-  { label: 'Gold Refinement', href: '/services' },
   { label: 'Market Analysis', href: '/services' },
 ];
 

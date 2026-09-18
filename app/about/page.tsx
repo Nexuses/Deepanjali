@@ -5,7 +5,6 @@ import MissionVision from '@/components/MissionVision';
 import RegulatoryFramework from '@/components/RegulatoryFramework';
 import OurInfrastructure from '@/components/OurInfrastructure';
 import SourcingStandards from '@/components/SourcingStandards';
-import AboutSpecialists from '@/components/AboutSpecialists';
 import BeginConversation from '@/components/BeginConversation';
 import Footer from '@/components/Footer';
 
@@ -24,7 +23,6 @@ export default function AboutPage() {
       <RegulatoryFramework />
       <OurInfrastructure />
       <SourcingStandards />
-      <AboutSpecialists />
       <BeginConversation />
       <Footer />
     </main>
