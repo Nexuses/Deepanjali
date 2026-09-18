@@ -2013,6 +2013,7 @@ a {
   width: 2.75rem;
   height: 2.75rem;
   margin-bottom: 1.15rem;
+  overflow: visible;
 }
 
 .industry-objections__icon-img {
@@ -2020,6 +2021,16 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transform-origin: left center;
+  filter: brightness(0.72) contrast(1.18) saturate(1.12);
+}
+
+.industry-objections__icon--gold-lg .industry-objections__icon-img {
+  transform: scale(1.205);
+}
+
+.industry-objections__icon--gold-sm .industry-objections__icon-img {
+  transform: scale(1.14);
 }
 
 .industry-objections__question {
@@ -2027,10 +2038,9 @@ a {
   font-family: var(--font-display);
   font-size: clamp(1.05rem, 1.45vw, 1.22rem);
   font-weight: 600;
-  font-style: italic;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  color: #1b242d;
+  color: #1B242D;
 }
 
 .industry-objections__divider {

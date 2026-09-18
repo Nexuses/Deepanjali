@@ -5,6 +5,7 @@ const objections = [
     tone: 'white' as const,
     iconSrc:
       'https://assets.nexuses.xyz/Mask_group__11__1789730986984_j83e.png',
+    iconClass: 'industry-objections__icon--gold-lg',
     question: 'Are your spreads actually competitive for smaller volume orders?',
     answer:
       'Our institutional liquidity lines deliver the same tight bid/ask spreads regardless of transaction size tied directly to live global spot rates with zero markup layered on top.',
@@ -29,6 +30,7 @@ const objections = [
     tone: 'white' as const,
     iconSrc:
       'https://assets.nexuses.xyz/Mask_group__14__1789730986984_0gku.png',
+    iconClass: 'industry-objections__icon--gold-sm',
     question:
       'Is Dipanjali regulated and compliant for institutional counterparties?',
     answer:
@@ -66,7 +68,14 @@ export default function IndustryObjectionsSection() {
               key={item.question}
               className={`industry-objections__card industry-objections__card--${item.tone}`}
             >
-              <span className="industry-objections__icon" aria-hidden="true">
+              <span
+                className={
+                  item.iconClass
+                    ? `industry-objections__icon ${item.iconClass}`
+                    : 'industry-objections__icon'
+                }
+                aria-hidden="true"
+              >
                 <Image
                   className="industry-objections__icon-img"
                   src={item.iconSrc}
@@ -75,7 +84,7 @@ export default function IndustryObjectionsSection() {
                   height={56}
                 />
               </span>
-              <h3 className="industry-objections__question">{`\u2018${item.question}\u2019`}</h3>
+              <h3 className="industry-objections__question">{item.question}</h3>
               <span
                 className="industry-objections__divider"
                 aria-hidden="true"
